@@ -6,5 +6,14 @@ spring:
     url: jdbc:mysql://172.20.10.4/sell?characterEncoding=utf-8&useSSL=false
   jpa:
       show-sql: true
+  jackson:
+    default-property-inclusion: non_null
 server:
   context-path: /sell
+wechat:
+  mpAppId: wxd898fcb01713c658
+  mpAppSecret: 2b4bb4300266a5a5c3c2b061bd5683f8
+  mchId: 1483469312
+  mchKey: 098F6BCD4621D373CADE4E832627B4F6
+  KeyPath: /var/h5.p12
+  notifyUrl: http://lzpnb.natapp1.cc/sell/pay/notify

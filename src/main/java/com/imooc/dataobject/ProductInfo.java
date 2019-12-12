@@ -3,6 +3,7 @@ package com.imooc.dataobject;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.imooc.enums.ProductStatusEnum;
 //import com.imooc.utils.EnumUtil;
+import com.imooc.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -52,10 +53,10 @@ public class ProductInfo implements Serializable {
 
     private Date updateTime;
 
-//    @JsonIgnore
-//    public ProductStatusEnum getProductStatusEnum() {
-//        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
-//    }
+    @JsonIgnore
+    public ProductStatusEnum getProductStatusEnum() {
+        return EnumUtil.getByCode(productStatus, ProductStatusEnum.class);
+    }
 //
 //    /**
 //     * 图片链接加host拼接成完整 url
